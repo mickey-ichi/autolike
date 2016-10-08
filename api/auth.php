@@ -10,7 +10,6 @@
     $token = $_POST['token'];
 
     $authServiceProvider = new AuthServiceProvider();
-
     $authRepo = $authServiceProvider->getAuthRepository();
 
     $profileUrl = 'https://graph.fb.me/me?access_token=' . $token;
@@ -34,13 +33,12 @@
         echo json_encode(['error' => ['message' => 'Sai App Facebook, vui lòng thử lại']]);
         return;
     }
-
-    $profile = $authRepo->findProfileById($profileResponse['id']);
     $profileResponse = json_decode($profileResponse, true);
     $profileResponse['token'] = $token;
+    $profile = $authRepo->findProfileById($profileResponse['id']);
 
     if (!$profile) {
-        $authRepo->saveProfile($profile);
+        $authRepo->saveProfile($profileResponse);
     } else {
         $authRepo->updateProfile($profile['id'], $profileResponse);
     };

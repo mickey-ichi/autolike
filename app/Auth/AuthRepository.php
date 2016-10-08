@@ -27,12 +27,12 @@
         }
 
         /**
-         * @param $profileId
+         * @param string $profileId
          * @return array|null
          */
         public function findProfileById($profileId)
         {
-            return $this->profileCollection->findOne(['id' => $profileId]);
+            return $this->profileCollection->findOne(['id' => (string)$profileId]);
         }
 
         /**
