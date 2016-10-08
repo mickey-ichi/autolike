@@ -3,7 +3,7 @@
 
     $(auth);
 
-    function auth () {
+    function auth() {
         var formLogin = $('#formLogin');
         var txtToken = $('#textAccessToken');
         var listHistoryUser = $('#listHistoryUser');
@@ -13,15 +13,15 @@
         var iconError = $('#iconError');
         var iconDone = $('#iconDone');
 
-        formLogin.on('submit', function(e) {
+        formLogin.on('submit', function (e) {
             e.preventDefault();
             $(login);
         });
-        txtToken.on('paste', function(e) {
+        txtToken.on('paste', function (e) {
             $(login);
         });
 
-        function login(){
+        function login() {
 
             errorMessage.text('');
             errorMessage.addClass('hide');
@@ -33,7 +33,7 @@
 
             setTimeout(function () {
                 var token = txtToken.val();
-                if(!token) {
+                if (!token) {
                     errorMessage.text('Nhập Access Token');
                     iconLike.addClass('hide');
                     iconError.removeClass('hide');
@@ -43,20 +43,20 @@
                     return false;
                 }
                 var login = $.ajax({
-                    type       : 'POST',
-                    url        : '/api/auth.php',
-                    data       : {token: token}
+                    type: 'POST',
+                    url: '/api/auth.php',
+                    data: {token: token}
                 });
-                login.done(function(res) {
+                login.done(function (res) {
                     var result = JSON.parse(res);
-                    if(result.error) {
+                    if (result.error) {
                         errorMessage.text(result.error.message);
                         errorMessage.removeClass('hide');
                         iconError.removeClass('hide');
                         loading.removeClass('show');
                         loading.addClass('hide');
 
-                    }else {
+                    } else {
                         iconDone.removeClass('hide');
                         loading.removeClass('show');
                         loading.addClass('hide');
