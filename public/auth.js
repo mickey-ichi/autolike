@@ -61,6 +61,7 @@
                         loading.removeClass('show');
                         loading.addClass('hide');
                         $.cookie('profile', JSON.stringify(result));
+                        window.location.href = "/main.php";
                     }
                 });
             });

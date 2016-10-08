@@ -44,7 +44,7 @@
                 <i class="material-icons"></i>
             </a>
             <a class="navbar-brand" href="index.php">
-                <span class="hidden-folded inline">LIKEMAX</span>
+                <span class="hidden-folded inline">LIKE FACEBOOK</span>
             </a>
             <!-- navbar collapse -->
             <div class="collapse navbar-toggleable-sm" id="navbar-0">
@@ -148,6 +148,70 @@
         <div class="box-header">
             <h2>Người đã sử dụng ứng dụng gần đây</h2>
         </div>
+        <div class="box-body">
+            <div class="col-sm-6 col-md-4">
+                <div class="list-item box r m-b">
+                    <a class="list-left">
+                        <span class="w-64 avatar">
+                            <img src="../assets/images/a3.jpg" class="img-circle">
+
+                        <i class="on b-white bottom"></i> 
+                         </span>
+                    </a>
+                    <div class="list-body">
+                        <div class="text-ellipsis"><a href="">Le Manh Hung</a></div>
+                        <small class="text-muted text-ellipsis">hunglm@sphinx-software.com</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="list-item box r m-b">
+                    <a class="list-left">
+                        <span class="w-64 avatar">
+                            <img src="../assets/images/a3.jpg" class="img-circle">
+
+                        <i class="on b-white bottom"></i>
+                         </span>
+                    </a>
+                    <div class="list-body">
+                        <div class="text-ellipsis"><a href="">Le Manh Hung</a></div>
+                        <small class="text-muted text-ellipsis">hunglm@sphinx-software.com</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="list-item box r m-b">
+                    <a class="list-left">
+                        <span class="w-64 avatar">
+                            <img src="../assets/images/a3.jpg" class="img-circle">
+
+                        <i class="on b-white bottom"></i>
+                         </span>
+                    </a>
+                    <div class="list-body">
+                        <div class="text-ellipsis"><a href="">Le Manh Hung</a></div>
+                        <small class="text-muted text-ellipsis">hunglm@sphinx-software.com</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="list-item box r m-b">
+                    <a class="list-left">
+                        <span class="w-64 avatar">
+                            <img src="../assets/images/a3.jpg" class="img-circle">
+
+                        <i class="on b-white bottom"></i>
+                         </span>
+                    </a>
+                    <div class="list-body">
+                        <div class="text-ellipsis"><a href="">Le Manh Hung</a></div>
+                        <small class="text-muted text-ellipsis">hunglm@sphinx-software.com</small>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
     </div>
 </div>
 <script src="assets/js/jquery/jquery/dist/jquery.js"></script>
