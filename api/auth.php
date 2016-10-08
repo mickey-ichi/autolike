@@ -3,7 +3,7 @@
     require __DIR__ . '/../app/Auth/AuthServiceProvider.php';
 
     if (!isset($_POST['token'])) {
-        echo json_encode(['error' => ['message' => 'token required']]);
+        echo json_encode(['error' => ['message' => 'Nhập Mã Access Token']]);
         return;
     }
 
@@ -25,13 +25,13 @@
 
     $profileResponse = @file_get_contents($profileUrl, false, stream_context_create($arrContextOptions));
     if ($profileResponse === false) {
-        echo json_encode(['error' => ['message' => 'token invalid']]);
+        echo json_encode(['error' => ['message' => 'Mã Access Token không khả dụng hoặc đã hết hạn']]);
         return;
     }
 
     $appResponse = @file_get_contents($appUrl, false, stream_context_create($arrContextOptions));
     if ($appResponse === false) {
-        echo json_encode(['error' => ['message' => 'app invalid']]);
+        echo json_encode(['error' => ['message' => 'Sai App Facebook, vui lòng thử lại']]);
         return;
     }
 

@@ -32,6 +32,8 @@
     <!-- build:css ../assets/styles/app.min.css -->
     <link rel="stylesheet" href="./assets/styles/app.min.css" type="text/css"/>
     <!-- endbuild -->
+    <link rel="stylesheet" href="./assets/styles/style.css" type="text/css"/>
+
     <link rel="stylesheet" href="./assets/styles/font.css" type="text/css"/>
 </header>
 <body>
@@ -111,20 +113,29 @@
                 </tbody>
             </table>
 
-            <form class="input-group col-md-12" onsubmit="return false;" method="post">
-                <input id="access_token"
-                       onpaste="setTimeout( function() {((x=$('#access_token').val().getToken())&amp;&amp;x)&amp;&amp;x.Login(!0&amp;&amp;document.querySelector('form[method]'));}, 100);"
-                       class="form-control" placeholder="Nhập Access Token lấy được tại ứng dụng vào đây">
+            <form class="input-group col-md-12" id="formLogin">
+                <input id="textAccessToken" class="form-control" placeholder="Nhập Access Token lấy được tại ứng dụng vào đây">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-fw primary">
-                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <i class="fa fa-spinner fa-pulse fa-fw hide" id="loading"></i>
+                        <i class="fa fa-thumbs-up" aria-hidden="true" id="iconLike"></i>
+                        <i class="fa fa-close hide" aria-hidden="true" id="iconError"></i>
+                        <i class="fa fa-check hide" aria-hidden="true" id="iconDone"></i>
+
                         Đăng Nhập
                     </button>
                 </span>
             </form>
             <div class="clearfix"></div>
-            <div class="error" id="message"></div>
             <br>
+            <div class="col-sm-12">
+                <div id="messageError" class="animated fadeIn alert alert-danger hide" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    Enter a valid email address
+                </div>
+            </div>
+            <div class="clearfix"></div>
             <br>
         </div>
         <div class="box-divider m-a-0"></div>
@@ -164,4 +175,7 @@
 
 <script src="assets/scripts/app.js"></script>
 
+<!--app-->
+<script src="public/auth.js"></script>
+<!--end app-->
 </body>
