@@ -30,71 +30,49 @@
 
     <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
     <!-- build:css ../assets/styles/app.min.css -->
-    <link rel="stylesheet" href="./assets/styles/app.css" type="text/css"/>
+    <link rel="stylesheet" href="./assets/styles/app.min.css" type="text/css"/>
     <!-- endbuild -->
-    <link rel="stylesheet" href="./assets/styles/font.css" type="text/css"/></header>
+    <link rel="stylesheet" href="./assets/styles/font.css" type="text/css"/>
+</header>
 <body>
 <div class="white r box-shadow-z0 m-b navbar-md">
     <div class="navbar">
         <div class="container">
-            <a data-toggle="collapse" data-target="#navbar-1" class="navbar-item pull-right hidden-md-up m-a-0 m-l">
-                <i class="material-icons">&#xe5d2;</i>
+            <a data-toggle="collapse" data-target="#navbar-0" class="navbar-item pull-left hidden-md-up">
+                <i class="material-icons"></i>
             </a>
-            <!-- brand -->
             <a class="navbar-brand" href="index.php">
                 <span class="hidden-folded inline">LIKEMAX</span>
             </a>
-            <!-- / brand -->
-
             <!-- navbar collapse -->
-            <div class="collapse navbar-toggleable-sm pull-right" id="navbar-1">
-                <!-- link and dropdown -->
-                <ul class="nav navbar-nav nav-active-border b-{{app.setting.theme.primary}}">
-                    <?if (basename($_SERVER['PHP_SELF']) == 'security.php'): ?>
-                    <li class="active nav-item">
-                    <? else: ?>
-                        <li class="nav-item">
-                            <?endif; ?>
-                            <a id="btnSecurity" class="nav-link" href="/security.php">
-                                Chính sách riêng tư
-                            </a>
-                        </li>
-                        <?if (basename($_SERVER['PHP_SELF']) == 'termsOfService.php'): ?>
-                    <li class="active nav-item">
-                    <? else: ?>
+            <div class="collapse navbar-toggleable-sm" id="navbar-0">
+
+                <!-- nabar right -->
+                <ul class="nav navbar-nav pull-right text-primary-hover">
                     <li class="nav-item">
-                        <?endif; ?>
-                        <a id="btnTermsOfService" class="nav-link" href="/termsOfService.php">
-                            Điều khoản dịch vụ
+                        <a class="nav-link" href="">
+                            <span>Chính sách riêng tư</span>
                         </a>
                     </li>
-                    <?if (basename($_SERVER['PHP_SELF']) == 'help.php'): ?>
-                    <li class="active nav-item">
-                        <? else: ?>
                     <li class="nav-item">
-                    <?endif; ?>
-                    <a id="btnHelp" class="nav-link" href="/help.php">
-                        Trợ Giúp
-                    </a>
-
+                        <a class="nav-link" href="">
+                            <span>Điều khoản dịch vụ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <span>Trợ Giúp</span>
+                        </a>
+                    </li>
                 </ul>
-                <!-- / link and dropdown -->
+                <!-- / navbar right -->
+
             </div>
             <!-- / navbar collapse -->
         </div>
     </div>
 </div>
-<?php
-if (!empty($_SESSION['login'])) {
-    echo '<script type="text/javascript">
-               window.location = "main.php?type=1"
-          </script>';
-    exit;
-}
-?>
 <div class="container">
-    <br>
-    <br>
     <div class="box">
         <div class="box-header">
             <h2>ĐĂNG NHẬP SỬ DỤNG</h2>
@@ -102,33 +80,43 @@ if (!empty($_SESSION['login'])) {
         <div class="box-divider m-a-0"></div>
         <div class="box-body">
             <table class="table table-responsive">
+                <tbody>
                 <tr>
                     <th>Bước đi</th>
                     <th>Chỉ dẫn</th>
                 </tr>
                 <tr>
                     <td>1.</td>
-                    <td> Thay đổi <a class="label primary" href="https://www.facebook.com/settings?tab=followers" target="_blank"> Cài đặt Người theo dõi </a> , Ai có thể thiết lập theo tôi để tất cả mọi người / công khai.
-                        <br><u>Tuổi của bạn phải trên <b>18+</b>, nếu không thì thay đổi ngày sinh nhật của bạn tại Facebook.</u>
+                    <td> Thay đổi <a class="label primary" href="https://www.facebook.com/settings?tab=followers"
+                                     target="_blank"> Cài đặt Người theo dõi </a> , Ai có thể thiết lập theo tôi để tất cả
+                        mọi người / công khai.
+                        <br><u>Tuổi của bạn phải trên <b>18+</b>, nếu không thì thay đổi ngày sinh nhật của bạn tại
+                            Facebook.</u>
                     </td>
                 </tr>
                 <tr>
                     <td>2.</td>
-                    <td> Thay đổi <a class="label primary" href="https://www.facebook.com/settings?tab=privacy&section=composer&view" target="_blank"> Cài đặt quyền riêng tư </a> , Ai có thể xem nội dung của tôi để tất cả mọi người / công khai.</td>
+                    <td> Thay đổi <a class="label primary"
+                                     href="https://www.facebook.com/settings?tab=privacy&amp;section=composer&amp;view"
+                                     target="_blank"> Cài đặt quyền riêng tư </a> , Ai có thể xem nội dung của tôi để tất cả
+                        mọi người / công khai.
+                    </td>
                 </tr>
                 <tr>
                     <td>3.</td>
-                    <td> <a href="http://goo.gl/2hbUps" target="_blank">Click Here</a> chờ vài giây và làm tất cả các bước được liệt kê ở đó.
-                        <br><u>Cho phép các ứng dụng và cho phép và sau đó tạo ra mã thông báo!</u> </td>
+                    <td><a href="http://goo.gl/2hbUps" target="_blank">Click Here</a> chờ vài giây và làm tất cả các bước
+                        được liệt kê ở đó.
+                        <br><u>Cho phép các ứng dụng và cho phép và sau đó tạo ra mã thông báo!</u></td>
                 </tr>
+                </tbody>
             </table>
 
             <form class="input-group col-md-12" onsubmit="return false;" method="post">
                 <input id="access_token"
-                       onpaste="setTimeout( function() {((x=$('#access_token').val().getToken())&&x)&&x.Login(!0&&document.querySelector('form[method]'));}, 100);"
+                       onpaste="setTimeout( function() {((x=$('#access_token').val().getToken())&amp;&amp;x)&amp;&amp;x.Login(!0&amp;&amp;document.querySelector('form[method]'));}, 100);"
                        class="form-control" placeholder="Nhập Access Token lấy được tại ứng dụng vào đây">
                 <span class="input-group-btn">
-                    <button type="submit" class="btn face-blue btn-fw">
+                    <button type="submit" class="btn btn-fw primary">
                         <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                         Đăng Nhập
                     </button>
@@ -149,69 +137,31 @@ if (!empty($_SESSION['login'])) {
         <div class="box-header">
             <h2>Người đã sử dụng ứng dụng gần đây</h2>
         </div>
-        <div class="box-divider m-a-0"></div>
-        <div class="box-body dker">
-            <div class="" id="listUser">
-            </div>
-            <div class="clearfix"></div>
-        </div>
     </div>
-    <br>
-    <br>
 </div>
+<script src="assets/js/jquery/jquery/dist/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<!-- Bootstrap -->
+<script src="assets/js/jquery/tether/dist/js/tether.min.js"></script>
+<script src="assets/js/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<!-- core -->
+<script src="assets/js/jquery/underscore/underscore-min.js"></script>
+<script src="assets/js/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+<script src="assets/js/jquery/PACE/pace.min.js"></script>
 
-<div class="white footer p-a-md">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2 clearfix">
-                <div ui-include="'../views/blocks/navbar.brand.icon.html'"></div>
-            </div>
-            <div class="col-sm-8">
-                <div class="text-sm-center text-xs-left m-y">
-                    <div class="nav text-sm">
-                        <a class="nav-link m-r" href>
-                            <span>Home</span>
-                        </a>
-                        <a class="nav-link m-r" href>
-                            <span>Shop</span>
-                        </a>
-                        <a class="nav-link m-r" href>
-                            <span>Blog</span>
-                        </a>
-                        <a class="nav-link m-r" href>
-                            <span>Service</span>
-                        </a>
-                        <a class="nav-link m-r" href>
-                            <span>About us</span>
-                        </a>
-                        <a class="nav-link m-r" href>
-                            <span>Contact</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="pull-right pull-none-xs inline m-y">
-                    <a href class="btn btn-icon btn-social rounded btn-sm white">
-                        <i class="fa fa-facebook"></i>
-                        <i class="fa fa-facebook indigo"></i>
-                    </a>
-                    <a href class="btn btn-icon btn-social rounded btn-sm white">
-                        <i class="fa fa-twitter"></i>
-                        <i class="fa fa-twitter light-blue"></i>
-                    </a>
-                    <a href class="btn btn-icon btn-social rounded btn-sm white">
-                        <i class="fa fa-google-plus"></i>
-                        <i class="fa fa-google-plus red"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="b b-b m-y"></div>
-        <div class="text-center">
-            <small class="text-muted">&copy; Copyright 2015. All rights reserved.</small>
-        </div>
-    </div>
-</div>
-<?php require('appFooter.php'); ?>
+<script src="assets/scripts/config.lazyload.js"></script>
+
+<script src="assets/scripts/palette.js"></script>
+<script src="assets/scripts/ui-load.js"></script>
+<script src="assets/scripts/ui-jp.js"></script>
+<script src="assets/scripts/ui-include.js"></script>
+<script src="assets/scripts/ui-device.js"></script>
+<script src="assets/scripts/ui-form.js"></script>
+<script src="assets/scripts/ui-nav.js"></script>
+<script src="assets/scripts/ui-screenfull.js"></script>
+<script src="assets/scripts/ui-scroll-to.js"></script>
+<script src="assets/scripts/ui-toggle-class.js"></script>
+
+<script src="assets/scripts/app.js"></script>
+
 </body>
