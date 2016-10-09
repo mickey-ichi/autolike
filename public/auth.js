@@ -12,6 +12,8 @@
         var iconLike = $('#iconLike');
         var iconError = $('#iconError');
         var iconDone = $('#iconDone');
+        var btnLogin = $('#btnLogin');
+
 
         formLogin.on('submit', function (e) {
             e.preventDefault();
@@ -32,14 +34,18 @@
             iconDone.addClass('hide');
 
             setTimeout(function () {
+                txtToken.attr('disabled', 'disabled');
+                btnLogin.attr('disabled', 'disabled');
                 var token = txtToken.val();
                 if (!token) {
-                    errorMessage.text('Nhập Access Token');
+                    errorMessage.text('Vui lòng nhập Access Token');
                     iconLike.addClass('hide');
                     iconError.removeClass('hide');
                     loading.addClass('hide');
                     loading.removeClass('show');
                     errorMessage.removeClass('hide');
+                    txtToken.removeAttr('disabled');
+                    btnLogin.removeAttr('disabled');
                     return false;
                 }
                 var login = $.ajax({
@@ -48,6 +54,9 @@
                     data: {token: token}
                 });
                 login.done(function (res) {
+                    txtToken.removeAttr('disabled');
+                    btnLogin.removeAttr('disabled');
+
                     var result = JSON.parse(res);
                     if (result.error) {
                         errorMessage.text(result.error.message);

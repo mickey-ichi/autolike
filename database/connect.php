@@ -1,4 +1,5 @@
 <?php
+
     $m = new MongoClient();
 
 // database
@@ -7,3 +8,4 @@
 // list collection
     $profileCollection = $db->profile;
     $appCollection = $db->app;
+

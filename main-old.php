@@ -1,12 +1,12 @@
 <?php require('config.php'); ?>
 <?php
 $main = true;
-//if (empty($_SESSION['login'])) {
-//    echo '<script type="text/javascript">
-//               window.location = "index.php"
-//          </script>';
-//    exit;
-//} ?>
+if (empty($_SESSION['login'])) {
+    echo '<script type="text/javascript">
+               window.location = "index.php"
+          </script>';
+    exit;
+} ?>
 <!DOCTYPE html>
 <html lang="vi">
 <header>

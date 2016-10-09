@@ -1,4 +1,11 @@
 <?php require('config.php');?>
+<?php
+if (empty($_COOKIE['profile'])) {
+    echo '<script type="text/javascript">
+               window.location.href = "/"
+          </script>';
+    exit;
+} ?>
 <!DOCTYPE html>
 <html lang="vi">
 <header>
@@ -61,7 +68,7 @@
                         <span class="hidden-sm-down _500" id="avtName"></span>
                     </a>
                     <div class="dropdown-menu pull-right dropdown-menu-scale">
-                        <a class="dropdown-item" onclick="logout()" ui-sref="access.signin">Đăng xuất</a>
+                        <a class="dropdown-item" id="btnLogout" ui-sref="access.signin">Đăng xuất</a>
                     </div>
                 </li>
             </ul>
@@ -382,4 +389,6 @@
 <script src="./assets/scripts/ui-toggle-class.js"></script>
 
 <script src="./assets/scripts/app.js"></script>
+
+<script src="./public/main.js"></script>
 </body>

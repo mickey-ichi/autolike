@@ -1,4 +1,12 @@
 <?php require('config.php');?>
+<?php
+if (!empty($_COOKIE['profile'])) {
+    echo '<script type="text/javascript">
+               window.location.href = "/main.php"
+          </script>';
+    exit;
+}
+//?>
 <!DOCTYPE html>
 <html lang="vi">
 <header>
@@ -116,12 +124,11 @@
             <form class="input-group col-md-12" id="formLogin">
                 <input id="textAccessToken" class="form-control" placeholder="Nhập Access Token lấy được tại ứng dụng vào đây">
                 <span class="input-group-btn">
-                    <button type="submit" class="btn btn-fw primary">
+                    <button type="submit" class="btn btn-fw primary" id="btnLogin">
                         <i class="fa fa-spinner fa-pulse fa-fw hide" id="loading"></i>
                         <i class="fa fa-thumbs-up" aria-hidden="true" id="iconLike"></i>
                         <i class="fa fa-close hide" aria-hidden="true" id="iconError"></i>
                         <i class="fa fa-check hide" aria-hidden="true" id="iconDone"></i>
-
                         Đăng Nhập
                     </button>
                 </span>
