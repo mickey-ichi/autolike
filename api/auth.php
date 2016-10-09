@@ -1,5 +1,4 @@
 <?php
-//echo phpinfo();die();
     require __DIR__ . '/../app/Auth/AuthServiceProvider.php';
 
     if (!isset($_POST['token'])) {

@@ -2,6 +2,7 @@
     "use strict";
 
     $(auth);
+    $(getUsers);
 
     function auth() {
         var formLogin = $('#formLogin');
@@ -77,4 +78,7 @@
         }
     }
 
+    function getUsers() {
+
+    }
 })(jQuery);

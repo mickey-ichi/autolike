@@ -45,7 +45,11 @@
                 window.location.href = "/";
                 return;
             }
-            coverPhoto.css('background-image', 'url(' +res.cover.source+ ')');
+            var cover  = '../assets/images/c9.jpg';
+            if(res.cover) {
+                cover = res.cover.source;
+            }
+            coverPhoto.css('background-image', 'url(' +cover+ ')');
         });
     }
 
