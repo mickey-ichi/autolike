@@ -61,10 +61,10 @@ if (empty($_COOKIE['profile'])) {
                 <li class="nav-item dropdown">
                     <a href="" class="nav-link dropdown-toggle clear" data-toggle="dropdown" aria-expanded="false">
                         <span class="avatar w-32">
-                          <img src="assets/images/a0.jpg">
+                          <img id="navAvatar" src="assets/images/a0.jpg">
                           <i class="on b-white bottom"></i>
                         </span>
-                        <span>Le Manh Hung</span>
+                        <span id="navUsername">Le Manh Hung</span>
                         <span class="hidden-sm-down _500" id="avtName"></span>
                     </a>
                     <div class="dropdown-menu pull-right dropdown-menu-scale">
@@ -80,21 +80,21 @@ if (empty($_COOKIE['profile'])) {
         <div class="col-sm-4 col-xs-12">
             <div class="box">
                 <div class="item">
-                    <div class="item-bg">
-                        <img src="assets/images/a3.jpg" class="blur">
+                    <div class="item-bg" id="coverPhoto" style="background-size: cover; background-position: center;">
                     </div>
                     <div class="p-a-lg pos-rlt text-center">
-                        <img src="assets/images/a3.jpg" class="img-circle w-56" style="margin-bottom: -7rem">
+                        <a id="urlLinkFacebook">
+                            <img id="userAvatar" class="img-circle w-56" style="margin-bottom: -7rem">
+                        </a>
                     </div>
                 </div>
                 <div class="p-a text-center">
-                    <a href="" class="text-md m-t block">Jack Perez</a>
+                    <a id="username" class="text-md m-t block">Jack Perez</a>
                     <p>
-                        <small>Designer, Blogger</small>
+                        <small id="birthday">Designer, Blogger</small>
                     </p>
-                    <p><a href="" class="btn btn-sm primary">Follow</a></p>
                     <div class="text-xs">
-                        <em>Photos: <strong>32</strong>, Videos: <strong>50</strong></em>
+                        <em id="emailProfile"></em>
                     </div>
                 </div>
             </div>
