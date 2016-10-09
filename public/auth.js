@@ -79,6 +79,39 @@
     }
 
     function getUsers() {
+        var listUser = $('#listUser');
 
+        var users = $.ajax({
+            type: 'GET',
+            url: '/api/user.php'
+        });
+        users.done(function (res) {
+            var list = JSON.parse(res);
+            var usersHtml = '';
+
+            $.each(list, function (key, item) {
+                if (!item.email) {
+                    item.email = item.birthday;
+                }
+                usersHtml =
+                    '<div class="col-sm-6 col-md-4 animated fadeIn">' +
+                    '<div class="list-item box r m-b">' +
+                    '<a class="list-left" href="https://www.facebook.com/app_scoped_user_id/' + item.id + '">' +
+                    '<span class="w-64 avatar">' +
+                    '<img src="https://graph.facebook.com/' + item.id + '/picture?type=large" class="img-circle"/>' +
+                    '<i class="on b-white bottom"></i>' +
+                    '</span>' +
+                    '</a>' +
+                    '<div class="list-body" style="margin-top: 10px;">' +
+                    '<div class="text-ellipsis"><a href="">' + item.name + '</a></div>' +
+                    '<small class="text-muted text-ellipsis">' + item.email + '</small>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>'
+                ;
+                listUser.append(usersHtml)
+            });
+
+        });
     }
 })(jQuery);

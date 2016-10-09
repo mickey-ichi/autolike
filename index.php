@@ -156,66 +156,7 @@ if (!empty($_COOKIE['profile'])) {
             <h2>Người đã sử dụng ứng dụng gần đây</h2>
         </div>
         <div class="box-body">
-            <div class="col-sm-6 col-md-4">
-                <div class="list-item box r m-b">
-                    <a class="list-left">
-                        <span class="w-64 avatar">
-                            <img src="../assets/images/a3.jpg" class="img-circle">
-
-                        <i class="on b-white bottom"></i> 
-                         </span>
-                    </a>
-                    <div class="list-body">
-                        <div class="text-ellipsis"><a href="">Le Manh Hung</a></div>
-                        <small class="text-muted text-ellipsis">hunglm@sphinx-software.com</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="list-item box r m-b">
-                    <a class="list-left">
-                        <span class="w-64 avatar">
-                            <img src="../assets/images/a3.jpg" class="img-circle">
-
-                        <i class="on b-white bottom"></i>
-                         </span>
-                    </a>
-                    <div class="list-body">
-                        <div class="text-ellipsis"><a href="">Le Manh Hung</a></div>
-                        <small class="text-muted text-ellipsis">hunglm@sphinx-software.com</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="list-item box r m-b">
-                    <a class="list-left">
-                        <span class="w-64 avatar">
-                            <img src="../assets/images/a3.jpg" class="img-circle">
-
-                        <i class="on b-white bottom"></i>
-                         </span>
-                    </a>
-                    <div class="list-body">
-                        <div class="text-ellipsis"><a href="">Le Manh Hung</a></div>
-                        <small class="text-muted text-ellipsis">hunglm@sphinx-software.com</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="list-item box r m-b">
-                    <a class="list-left">
-                        <span class="w-64 avatar">
-                            <img src="../assets/images/a3.jpg" class="img-circle">
-
-                        <i class="on b-white bottom"></i>
-                         </span>
-                    </a>
-                    <div class="list-body">
-                        <div class="text-ellipsis"><a href="">Le Manh Hung</a></div>
-                        <small class="text-muted text-ellipsis">hunglm@sphinx-software.com</small>
-                    </div>
-                </div>
-            </div>
+            <div id="listUser"></div>
             <div class="clearfix"></div>
         </div>
 
