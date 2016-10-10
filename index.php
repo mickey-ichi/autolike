@@ -137,9 +137,6 @@ if (!empty($_COOKIE['profile'])) {
             <br>
             <div class="col-sm-12">
                 <div id="messageError" class="animated fadeIn alert alert-danger hide" role="alert">
-                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error:</span>
-                    Enter a valid email address
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -163,7 +160,7 @@ if (!empty($_COOKIE['profile'])) {
     </div>
 </div>
 <script src="assets/js/jquery/jquery/dist/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="./assets/js/jquery/jquery-cookies/jquery.cookie.js"></script>
 <!-- Bootstrap -->
 <script src="assets/js/jquery/tether/dist/js/tether.min.js"></script>
 <script src="assets/js/jquery/bootstrap/dist/js/bootstrap.js"></script>

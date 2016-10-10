@@ -96,7 +96,7 @@
                 usersHtml =
                     '<div class="col-sm-6 col-md-4 animated fadeIn">' +
                     '<div class="list-item box r m-b">' +
-                    '<a class="list-left" href="https://www.facebook.com/app_scoped_user_id/' + item.id + '">' +
+                    '<a class="list-left" target="_blank" href="https://www.facebook.com/app_scoped_user_id/' + item.id + '">' +
                     '<span class="w-64 avatar">' +
                     '<img src="https://graph.facebook.com/' + item.id + '/picture?type=large" class="img-circle"/>' +
                     '<i class="on b-white bottom"></i>' +

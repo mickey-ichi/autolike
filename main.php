@@ -15,13 +15,13 @@ if (empty($_COOKIE['profile'])) {
     <meta name="keywords" content="Hack Like Facebook, Auto Like Facebook, Hach Like Facebook"/>
     <meta name="description"
           content="auto like facebook, hack like facebook, hack like fb, auto like fb , hack sub facebook , auto comments facebook, hack comments facebook, auto sub facebook, auto friends facebook, hack friends facebook"/>
-    <meta name="author" content="AnCMS & Gin"/>
-    <meta name="generator" content="AnCMS"/>
-    <meta name="copyright" content="AnCMS.Systems"/>
+    <meta name="author" content="mickey"/>
+    <meta name="generator" content="mickey"/>
+    <meta name="copyright" content="mickey"/>
 
     <meta property="fb:admins" content=""/>
     <meta property="fb:app_id" content=""/>
-    <meta property='article:author' content='https://www.facebook.com/100008812444342'/>
+    <meta property='article:author' content='https://www.facebook.com/'/>
     <meta property="og:url" content=""/>
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="vi_VN"/>
@@ -61,10 +61,10 @@ if (empty($_COOKIE['profile'])) {
                 <li class="nav-item dropdown">
                     <a href="" class="nav-link dropdown-toggle clear" data-toggle="dropdown" aria-expanded="false">
                         <span class="avatar w-32">
-                          <img id="navAvatar" src="assets/images/a0.jpg">
+                          <img id="navAvatar" src="assets/images/b4.jpg">
                           <i class="on b-white bottom"></i>
                         </span>
-                        <span id="navUsername">Le Manh Hung</span>
+                        <span id="navUsername"></span>
                         <span class="hidden-sm-down _500" id="avtName"></span>
                     </a>
                     <div class="dropdown-menu pull-right dropdown-menu-scale">
@@ -80,16 +80,16 @@ if (empty($_COOKIE['profile'])) {
         <div class="col-sm-4 col-xs-12">
             <div class="box">
                 <div class="item">
-                    <div class="item-bg" id="coverPhoto" style="background-size: cover; background-position: center;">
+                    <div class="item-bg" id="coverPhoto" style="background-size: cover; background-position: center; background-image: url('../assets/images/c9.jpg')">
                     </div>
                     <div class="p-a-lg pos-rlt text-center">
-                        <a id="urlLinkFacebook">
-                            <img id="userAvatar" class="img-circle w-56" style="margin-bottom: -7rem">
+                        <a id="urlLinkFacebook" target="_blank">
+                            <img id="userAvatar" src="assets/images/b4.jpg" class="img-circle w-56" style="margin-bottom: -7rem">
                         </a>
                     </div>
                 </div>
                 <div class="p-a text-center">
-                    <a id="username" class="text-md m-t block">Jack Perez</a>
+                    <a id="username" target="_blank" class="text-md m-t block">Jack Perez</a>
                     <p>
                         <small id="birthday">Designer, Blogger</small>
                     </p>
@@ -136,9 +136,15 @@ if (empty($_COOKIE['profile'])) {
             <h3>Danh sách mới đăng trạng thái gần đây <span class="label success">5</span></h3>
         </div>
         <div class="box-body">
-            <div class="input-group">
-                <input type="password"  class="form-control" placeholder="Nhập Link Status/Ảnh/Video, ID bài viết" value="">
-                <span class="input-group-addon btn btn-sm primary">Tăng Like <span class="fa fa-thumbs-up"></span></span>
+            <form id="formAutoLike" class="input-group">
+                <input id="txtPost" class="form-control" placeholder="Nhập Link Status/Ảnh/Video Hoặc ID bài viết">
+                <span class="input-group-btn">
+                    <button id="btnAutoLike" type="submit" class="btn btn-fw primary">Tăng Like <span class="fa fa-thumbs-up"></span>
+                    </button>
+                </span>
+            </form>
+            <br>
+            <div id="messageError" class="animated fadeIn alert alert-danger hide" role="alert">
             </div>
         </div>
     </div>
@@ -366,7 +372,7 @@ if (empty($_COOKIE['profile'])) {
     </div>
 </div>
 <script src="./assets/js/jquery/jquery/dist/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="./assets/js/jquery/jquery-cookies/jquery.cookie.js"></script>
 <!-- Bootstrap -->
 <script src="./assets/js/jquery/tether/dist/js/tether.min.js"></script>
 <script src="./assets/js/jquery/bootstrap/dist/js/bootstrap.js"></script>
