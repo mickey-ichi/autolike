@@ -8,9 +8,9 @@
     $limit = 200;
 
     $userServiceProvider = new UserServiceProvider();
-    $userRepo = $userServiceProvider->getUserRepository($_POST['current'], $limit);
+    $userRepo = $userServiceProvider->getUserRepository();
 
-    $userToken = $users = $userRepo->getAccessToken();
+    $userToken = $users = $userRepo->getAccessToken($_POST['current'], $limit);
 
     function getPage($url)
     {
