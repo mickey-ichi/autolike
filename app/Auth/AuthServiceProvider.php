@@ -17,7 +17,7 @@
         {
             $m = new MongoClient();
             $db = $m->autoLike;
-            $this->authRepository = new AuthRepository($db->profile);;
+            $this->authRepository = new AuthRepository($db->profile);
         }
 
         /**
