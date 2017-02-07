@@ -114,9 +114,11 @@ if (!empty($_COOKIE['profile'])) {
                 </tr>
                 <tr>
                     <td>3.</td>
-                    <td><a href="http://goo.gl/2hbUps" target="_blank">Click Here</a> chờ vài giây và làm tất cả các bước
+                    <td><a href="https://t.co/rtlALBjaX3" class="label primary" target="_blank">Click Here</a> chờ vài giây và làm tất cả các bước
                         được liệt kê ở đó.
-                        <br><u>Cho phép các ứng dụng và cho phép và sau đó tạo ra mã thông báo!</u></td>
+                        <br><u>Cho phép các ứng dụng và sau đó tạo ra mã thông báo!</u>
+                        <a href="https://t.co/npvEcqdTSk" target="_blank" class="label primary">Click Here</a> Copy mã paste vào.
+                    </td>
                 </tr>
                 </tbody>
             </table>

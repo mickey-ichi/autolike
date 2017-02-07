@@ -26,14 +26,14 @@
         return $html;
     }
 
+    $statusRes = [];
 
     for ($i = 0; $i < $limit; $i++) {
         if (@$userToken[$i]) {
-            echo $userToken[$i]['token'] . PHP_EOL;
             $x = getPage(sprintf('https://graph.fb.me/%s/likes?method=POST&access_token=%s', $_POST['id'], $userToken[$i]['token']));
-            echo $x . PHP_EOL;
-//            if ($x == 'true') {
-//                $x++;
-//            }
+            $status = json_decode($x);
+            array_push($statusRes, $status);
         }
     }
+
+    echo json_encode($statusRes);

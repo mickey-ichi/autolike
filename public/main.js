@@ -150,7 +150,16 @@
                 btnAutoLike.removeAttr('disabled');
                 return;
             }
-            console.log(id);
+            var like = $.ajax({
+                type: 'POST',
+                url: '/api/auto-like.php',
+                data: {id: id, current: 1}
+            });
+            like.done(function(res) {
+                console.log(JSON.parse(res));
+                txtPost.removeAttr('disabled');
+                btnAutoLike.removeAttr('disabled');
+            });
         }
     }
 
